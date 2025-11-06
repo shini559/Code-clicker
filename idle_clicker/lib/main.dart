@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:idle_clicker/screen/clicker_page.dart';
 
-class CodeClicker extends StatefulWidget {
+void main() {
+  runApp(const CodeClicker());
+}
+
+class CodeClicker extends StatelessWidget {
   const CodeClicker({super.key});
 
   @override
-  State<CodeClicker> createState() => _CodeClickerState();
-}
-
-class _CodeClickerState extends State<CodeClicker> {
-  @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      title: 'Code Clicker',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const ClickerPage(),
+    );
   }
 }
